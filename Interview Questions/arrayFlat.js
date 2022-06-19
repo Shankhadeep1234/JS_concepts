@@ -41,7 +41,18 @@ function flatten() {
   return output;
 }
 
+//alternate solution
+function flatAgain() {
+  return this.toString()
+    .split(",")
+    .map((el) => Number(el));
+}
+
 Array.prototype.flatten = flatten;
+Array.prototype.flatAgain = flatAgain;
 
 const flatArr = input.flatten();
 console.log(flatArr);
+
+const flatArr2 = input.flatAgain();
+console.log(flatArr2);
